@@ -3,33 +3,35 @@ import img1 from "../assets/img/res/1.jpg";
 import img2 from "../assets/img/res/2.jpg";
 import img3 from "../assets/img/res/3.jpg";
 import img4 from "../assets/img/res/4.jpg";
-
+import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 
 const slides = [
   {
+    image: img1,
+    title: "Residential Glass Repair & Replacement in Dallas",
+    description: `High-Quality Home Window & Glass Solutions
+At Glass Replacement Pros, we specialize in residential glass repair, replacement, and installation for homeowners in Dallas and surrounding areas. Whether you're looking to upgrade your windows for energy efficiency, enhance your home’s curb appeal, or repair broken glass, our team ensures precision craftsmanship and premium materials for long-lasting results. We offer a wide range of services, from replacing cracked or fogged windows to installing custom glass features that complement your home’s design. Our expert technicians work with attention to detail, ensuring each project is completed efficiently and with the highest standard of quality. With our commitment to customer satisfaction, we guarantee reliable, affordable solutions tailored to meet your specific needs.`
+  },
+  {
     image: img2,
-    title: "Glass Shower Doors: Long-Lasting Beauty and Durability",
-    description:
-      "Upgrade your bathroom with sleek, frameless glass shower doors that offer modern aesthetics and long-term durability. Our high-quality glass and expert installation ensure a watertight seal and stunning finish for years to come.",
+    title: "Comprehensive Residential Glass Services",
+    description: `We offer a comprehensive range of residential glass solutions designed to enhance the beauty, safety, and functionality of your home. Whether you're looking to upgrade your windows, replace damaged glass, or add custom features, our team is equipped to handle all your glass needs with precision and care. From home window repair and replacement for single and double-pane glass to tempered glass for sliding doors and exterior windows, we ensure that each installation is durable and stylish.
+
+Our services also include custom shower doors for a modern bathroom transformation, glass tabletops for dining tables, coffee tables, and desktops, as well as storm window replacements and garage door glass repair. We also provide custom mirrors, cut to size, with a variety of framed options to suit your design preferences. No matter the project, we’re committed to delivering high-quality glass solutions that elevate your home’s aesthetic and improve its functionality.`
   },
   {
     image: img3,
-    title: "Energy-Efficient Window Replacements",
-    description:
-      "Reduce energy costs and enhance indoor comfort with our insulated window glass replacements. Designed to block heat in summer and retain warmth in winter, these windows combine performance with beautiful clarity.",
-  },
-  {
-    image: img1,
-    title: "Custom Glass Backsplashes & Cabinet Glass",
-    description:
-      "Bring a unique touch to your kitchen or bath with custom-cut glass backsplashes and cabinet inserts. Easy to clean and visually striking, our designs are tailored to elevate your space with a modern, polished look.",
+    title: "Energy-Efficient Window Replacement",
+    description: `Upgrading to energy-efficient windows is a smart investment for your home, offering a variety of benefits that enhance both comfort and savings. At Glass Replacement Pros, we provide double-pane, triple-pane, and Low-E glass options designed to improve insulation, reduce heat transfer, and make your home more energy-efficient. These windows are crafted to keep your home comfortable year-round, all while lowering your energy bills.
+
+Energy-efficient windows not only help reduce your monthly utility costs, but they also increase the overall value of your home. They offer excellent noise reduction, creating a quieter indoor environment, and protect your furniture and flooring from UV damage that causes fading. With enhanced insulation and energy savings, upgrading to energy-efficient windows is an easy way to improve both the comfort and longevity of your home.`
   },
 ];
 
 const AutoCard = () => {
   return (
-    <section className="w-full">
+    <section className="w-full text-black">
                   <div className="w-full bg-primary text-black py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl uppercase font-bold mb-6 leading-tight">
@@ -76,7 +78,7 @@ At Glass Replacement Pros, we provide expert window installation for new home co
                 <h2 className="text-2xl md:text-3xl font-bold text-primary">
                   {slide.title}
                 </h2>
-                <p className="text-md md:text-lg text-white">
+                <p className="text-md md:text-lg text-black">
                   {slide.description}
                 </p>
               </div>
@@ -84,6 +86,41 @@ At Glass Replacement Pros, we provide expert window installation for new home co
           ))}
         </div>
       </div>
+
+    <section className="w-full bg-base-100 py-20 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
+        {/* Left Heading */}
+        <div className="flex-1">
+          <div className="border-l-4 border-primary pl-4 mb-4">
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-base-content">
+              HOME WINDOW & GLASS <br /> EXPERTS
+            </h2>
+          </div>
+        </div>
+
+        {/* Right Services List */}
+        <div className="flex-1">
+          <h3 className="text-xl font-bold mb-4 text-base-content">
+            HOME WINDOW SERVICES
+          </h3>
+          <ul className="space-y-4 text-base-content text-sm md:text-base">
+            {[
+              "Tempered glass for sliding doors and exterior windows",
+              "Glass shower doors for a modern bathroom upgrade",
+              "Custom-cut glass for desktops, coffee tables, and dining tables",
+              "Storm window replacements and garage door glass repairs",
+              "Mirrors cut to size, including framed options from our catalog",
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <FaCheckCircle className="text-primary w-5 h-5 mt-1" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+      
     <section className="w-full bg-base-100 py-20 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
@@ -120,7 +157,7 @@ At Glass Replacement Pros, we provide expert window installation for new home co
             <h3 className="text-2xl font-extrabold mb-4 text-primary">
               {card.title}
             </h3>
-            <p className="text-base leading-relaxed text-neutral-content">
+            <p className="text-base leading-relaxed">
               {card.text}
             </p>
           </div>

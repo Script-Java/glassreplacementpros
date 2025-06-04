@@ -10,7 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="">
+    <header className="bg-black">
       <nav className="flex max-w-7xl mx-auto justify-between items-center p-4 relative">
       <div>
         <Link href={"/"}>
@@ -20,16 +20,16 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden lg:flex items-center gap-4">
-        <li className="btn btn-ghost">
+        <li className="btn btn-ghost text-white">
           <Link href="/">Home</Link>
         </li>
-        <li className="btn btn-ghost">
+        <li className="btn btn-ghost text-white">
           <Link href="/auto">Auto</Link>
         </li>
-        <li className="btn btn-ghost">
+        <li className="btn btn-ghost text-white">
           <Link href="/residential">Residential</Link>
         </li>
-        <li className="btn btn-outline">
+        <li className="btn btn-outline text-white">
           <Link href={'tel:+19729007559'}>(972) 900-7559</Link>
         </li>
         <li className="btn btn-primary">

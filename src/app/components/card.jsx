@@ -52,84 +52,63 @@ const Card = () => {
         </div>
       </div>
 
-      <section className="w-full bg-base-100 py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-t-2 border-primary inline-block pt-4">
-              Expert Auto & Residential Glass Services
-            </h2>
-          </div>
+<section className="w-full bg-base-100 py-20 px-6">
+  <div className="max-w-7xl mx-auto">
+    {/* Section Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-t-2 border-primary inline-block pt-4">
+        Expert Auto & Residential Glass Services
+      </h2>
+    </div>
 
-          <div className="grid grid-cols-1 text-white md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="col-span-1">
-              <Image
-                src={img5}
-                alt="Classic car glass repair"
-                className="rounded-xl object-cover w-full h-auto shadow-lg"
-              />
-            </div>
+    <div className="flex flex-col lg:flex-row gap-10 items-stretch">
+      {/* Left Image */}
+      <div className="w-full lg:w-5/12 rounded-2xl overflow-hidden shadow-xl">
+        <Image
+          src={img5}
+          alt="Classic car glass repair"
+          className="w-full h-full object-cover"
+        />
+      </div>
 
-            <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl font-bold text-primary mb-2">
-                  Glass Replacement Pros
-                </h3>
-                <p>
-                  With over 20 years of experience, we deliver top-tier auto and
-                  residential glass solutions without hidden fees. Count on our
-                  team for reliable service and expert workmanship in Dallas.
-                </p>
-              </div>
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl text-primary font-bold mb-2">Upfront Pricing</h3>
-                <p>
-                  No surprises—just honest, clear pricing. We provide estimates
-                  before work begins so you know exactly what to expect. Trusted
-                  service throughout Dallas and nearby areas.
-                </p>
-              </div>
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl text-primary font-bold mb-2">Free Estimates</h3>
-                <p>
-                  We make expert glass repair and replacement affordable with
-                  complimentary quotes. Enjoy professional results without the
-                  high cost.
-                </p>
-              </div>
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl text-primary font-bold mb-2">
-                  Certified Glass Technicians
-                </h3>
-                <p>
-                  Our certified experts bring skill, precision, and care to
-                  every job. Family-owned and customer-focused, we’re proud to
-                  serve Dallas with exceptional service.
-                </p>
-              </div>
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl text-primary font-bold mb-2">
-                  Fast & Efficient Glass Services
-                </h3>
-                <p>
-                  Need service today? Our mobile fleet is ready to dispatch with
-                  same-day solutions. We get your vehicle or home back in shape
-                  quickly and efficiently.
-                </p>
-              </div>
-              <div className="bg-base-100 border border-base-300 rounded-lg p-6 shadow-md">
-                <h3 className="text-xl text-primary font-bold mb-2">
-                  Fast & Efficient Glass Services
-                </h3>
-                <p>
-                  Need service today? Our mobile fleet is ready to dispatch with
-                  same-day solutions. We get your vehicle or home back in shape
-                  quickly and efficiently.
-                </p>
-              </div>
-            </div>
+      {/* Right Content Cards */}
+      <div className="w-full lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          {
+            title: "Glass Replacement Pros",
+            text: "At Glass Replacement Pros, we provide affordable, transparent pricing – you’ll never pay more than expected. With 20 years of experience in auto glass repair, windshield replacement, and residential glass services, we’ve built a trusted reputation for delivering top-quality glass solutions with no hidden fees. Whether you need a car window repair, a home window replacement, or custom glass installation, we are the go-to glass specialists in Dallas."
+          },
+          {
+            title: "Upfront Pricing",
+            text: "At Glass Replacement Pros, we believe in honest, upfront pricing – you’ll always see the total cost before we begin work. Whether you need auto glass repair, windshield replacement, or residential window glass repair, we provide transparent pricing with no surprises. With our expert knowledge and exceptional customer service, we’re proud to be the top choice for glass replacement in Dallas and surrounding areas."
+          },
+          {
+            title: "Free Estimates",
+            text: "At Glass Replacement Pros, we make auto and residential glass repair quick, efficient, and affordable. Get a free estimate upfront and complete your project without breaking the bank. With a trusted reputation for delivering the best auto glass repair and residential window replacement in the Greater Dallas area, we ensure high-quality service at competitive prices."
+          },
+          {
+            title: "Certified Technicians",
+            text: "At Glass Replacement Pros, we are a family-owned and operated company committed to providing top-quality auto and residential glass services. Our certified glass technicians are highly trained to deliver expert craftsmanship at affordable prices. With a focus on exceptional customer service, we take pride in being the go-to glass repair and replacement specialists in Dallas and beyond."
+          },
+          {
+            title: "Fast & Efficient Service",
+            text: "At Glass Replacement Pros, we provide fast, reliable, and top-rated glass services for your vehicle or home. Our expert technicians are dispatched on time, every time, ensuring prompt and professional service at your chosen date and time. Whether you need mobile auto glass repair, windshield replacement, or home window repair, we proudly serve Dallas and surrounding areas with guaranteed efficiency."
+          },
+          {
+            title: "Lifetime Workmanship Guarantee",
+            text: "We stand behind our work with a lifetime guarantee. Your safety, satisfaction, and peace of mind come first. Our commitment doesn't end after the job is done — if anything goes wrong due to workmanship, we’ll fix it at no extra cost. Whether it’s a windshield replacement or a residential window install, our guarantee ensures lasting results you can count on. With Glass Replacement Pros, you get more than a service."
+          }
+        ].map((card, index) => (
+          <div key={index} className="bg-base-100 border border-base-300 p-5 rounded-xl shadow-md">
+            <h3 className="text-lg font-bold text-primary mb-2">{card.title}</h3>
+            <p className="text-base-content text-sm leading-relaxed">{card.text}</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <div className="w-full max-w-7xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center gap-10">
       {/* Image and Title Section */}
@@ -191,7 +170,7 @@ const Card = () => {
                 <h2 className="text-2xl md:text-3xl font-bold text-primary">
                   {slide.title}
                 </h2>
-                <p className="text-md md:text-lg text-white">
+                <p className="text-md md:text-lg text-black">
                   {slide.description}
                 </p>
               </div>

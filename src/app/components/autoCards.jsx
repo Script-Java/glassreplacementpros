@@ -7,27 +7,44 @@ import img5 from "../assets/img/auto/5.jpg";
 import img6 from "../assets/img/auto/6.jpg";
 import img7 from "../assets/img/auto/7.jpg";
 import img8 from "../assets/img/auto/8.jpg";
+import img9 from "../assets/img/auto/9.jpg";
 import { FaCheckCircle } from "react-icons/fa";
 import Link from "next/link";
 
 const slides = [
   {
     image: img3,
-    title: "Your Single Source for Glass Maintenance Services",
-    description:
-      "From stone chips to major cracks, our certified technicians restore clarity and structural integrity using the latest repair techniques and industry-leading materials. We get you back on the road with safety and speed.",
+    title: "Same-Day Windshield Replacement – Get Back on the Road Fast",
+    description: `A cracked or shattered windshield is not just an inconvenience—it is a safety hazard. At Glass Replacement Pros, we offer same-day windshield replacement services to ensure you drive safely.
+
+Why Choose Our Windshield Replacement Service?
+High-quality OEM and aftermarket windshields
+Fast, professional installation by certified technicians
+Affordable pricing with free estimates
+Windshield recalibration for ADAS-equipped vehicles
+`
   },
   {
     image: img5,
-    title: "Comprehensive Windshield Repair & Replacement",
-    description:
-      "Enhance your living space with custom-designed glass solutions for showers, mirrors, tabletops, and more. Our residential services combine elegant craftsmanship with energy-efficient materials tailored to your home.",
+    title: "Side Window Replacement – Quick & Secure Repairs",
+    description: `A broken side window can leave your vehicle vulnerable to weather and theft. Our side window replacement service ensures a fast, secure fix with high-quality glass and expert installation.
+
+Our Side Window Services Include:
+Complete replacement for shattered or damaged side windows
+Precision installation using manufacturer-approved glass
+Quick turnaround to restore your vehicle’s security
+Mobile service available for added convenience`
   },
   {
     image: img6,
-    title: "Truck & Commercial Vehicle Auto Glass Services",
-    description:
-      "Unexpected damage? We’ve got your back. Our mobile emergency glass team reaches you quickly, delivering rapid and reliable service to secure your vehicle or home—day or night, rain or shine.",
+    title: "Rear Window Replacement – Restoring Visibility & Safety",
+    description: `A damaged rear window can compromise visibility and weaken your car’s structural integrity. We provide professional rear window replacement with durable glass and expert craftsmanship.
+
+Why Choose Our Rear Window Replacement?
+Factory-grade glass to match your vehicle’s specifications
+Expert installation to restore safety and function
+Defrost and heating elements reconnected for optimal performance
+Hassle-free service with mobile and in-shop options`
   },
 ];
 
@@ -60,7 +77,7 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
         </h2>
         <div className="relative h-[700px] w-full rounded-xl overflow-hidden shadow-lg">
           <Image
-            src={img6}
+            src={img9}
             alt="Green classic car glass repair"
             fill
             className="object-cover w-full h-full"
@@ -95,61 +112,77 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
       {/* Content Section */}
 
   
-      {/* Services Section */}
-      <div className="w-full bg-base-100 py-20 px-4">
-        <div className="max-w-7xl mx-auto grid gap-20">
-          {slides.map((slide, i) => (
-            <div
-              key={i}
-              className={`flex flex-col md:flex-row ${
-                i % 2 === 0 ? "md:flex-row-reverse" : ""
-              } items-center gap-10`}
-            >
-              <div className="w-full md:w-1/2 h-96 relative rounded-2xl shadow-xl overflow-hidden">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="w-full md:w-1/2 space-y-4">
-                <h2 className="text-2xl md:text-3xl font-bold text-primary">
-                  {slide.title}
-                </h2>
-                <p className="text-md md:text-lg text-white">
-                  {slide.description}
-                </p>
-              </div>
-            </div>
-          ))}
+<div className="w-full bg-base-100 py-20 px-6">
+  <div className="max-w-7xl mx-auto space-y-24">
+    {slides.map((slide, i) => (
+      <div
+        key={i}
+        className={`flex flex-col-reverse md:flex-row ${
+          i % 2 === 0 ? "md:flex-row-reverse" : ""
+        } items-center gap-10`}
+      >
+        {/* Text Content */}
+        <div className="w-full md:w-1/2 space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary">
+            {slide.title}
+          </h2>
+          <div className="text-base-content text-md md:text-lg whitespace-pre-line leading-relaxed">
+            {slide.description.split('\n').map((line, index) => (
+              <p key={index} className="mb-2">
+                {line.startsWith('-') || line.startsWith('•') || line.includes(':')
+                  ? <span className="pl-2">• {line.trim()}</span>
+                  : line}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="w-full md:w-1/2 h-96 relative rounded-2xl shadow-xl overflow-hidden">
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
+    ))}
+  </div>
+</div>
           <section className="w-full bg-base-100 py-20 px-6">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
     {[
       {
-        title: "Certified Auto Glass Technicians",
+        title: "Mobile Auto Glass Service",
         text: (
           <>
-            At <span className="font-semibold text-primary">Glass Replacement Pros</span>, our team of <span className="font-semibold">certified technicians</span> specializes in <span className="font-semibold">auto glass repair and replacement</span> for all makes and models. From <span className="font-semibold">windshield chips</span> to <span className="font-semibold">full replacements</span>, we guarantee <span className="font-semibold">fast, professional service</span> throughout <span className="font-semibold">Dallas and the surrounding areas</span>.
+            <span className="">At Need auto glass repair but can't make it to a shop? Glass Replacement Pros brings the service to you. Whether you're at home, work, or dealing with unexpected damage on the road, our mobile glass experts arrive on time, ready to restore your vehicle’s safety.
+
+We specialize in windshield repairs and replacements, car window and side glass replacement, and emergency auto glass services across Dallas and surrounding areas. With our fast and hassle-free mobile service, you can get your vehicle’s glass repaired without disrupting your day.
+
+Schedule your mobile auto glass service today and let us come to you.</span>.
           </>
         ),
       },
       {
-        title: "Same-Day Mobile Service",
+        title: "Free Auto Glass Estimate",
         text: (
           <>
-            Need a <span className="font-semibold">windshield replaced fast?</span> We offer <span className="font-semibold">same-day, mobile auto glass service</span> that comes to your location—whether you’re at home, work, or on the road. Our technicians use <span className="font-semibold">OEM-quality materials</span> and <span className="font-semibold">advanced tools</span> to ensure safe, long-lasting results with <span className="font-semibold">zero hassle</span>.
-          </>
+Looking for an affordable auto glass repair or replacement? At Glass Replacement Pros, we provide free, no-obligation quotes so you know exactly what to expect before we begin. Whether you need a windshield replacement, car window repair, or mobile auto glass service, our team ensures upfront pricing with no hidden fees.
+
+Contact us today to get your free auto glass estimate and schedule your service with Dallas’s trusted glass experts.          </>
         ),
       },
       {
-        title: "Trusted by DFW Drivers",
+        title: "DFW Auto Glass Pros",
         text: (
           <>
-            For over two decades, <span className="font-semibold text-primary">Glass Replacement Pros</span> has been the go-to source for <span className="font-semibold">auto glass repairs and replacements</span> in North Texas. From <span className="font-semibold">windshields to side and rear glass</span>, our <span className="font-semibold">honest pricing</span> and <span className="font-semibold">lifetime workmanship guarantee</span> make us the preferred choice for drivers across the region.
-          </>
+With two decades of experience in auto, truck, and SUV glass repair and replacement, Glass Replacement Pros is the name you can trust in Dallas and surrounding areas. We believe in honest pricing, so you’ll never pay more than expected—no hidden fees, no surprises.
+
+Our reputation is built on quality workmanship and reliable service, making us the go-to choice for auto and residential glass replacement in the Greater Dallas Metroplex.
+
+Call today for expert glass repair backed by 20 years of experience!          </>
         ),
       },
     ].map((card, idx) => (
@@ -161,7 +194,7 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
         <h3 className="text-2xl font-extrabold mb-4 text-primary">
           {card.title}
         </h3>
-        <p className="text-base leading-relaxed text-neutral-content">
+        <p className="text-base font-semibold leading-relaxed text-black">
           {card.text}
         </p>
       </div>
