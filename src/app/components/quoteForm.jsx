@@ -1,4 +1,3 @@
-// frontend: /components/QuoteForm.jsx
 'use client';
 
 import { useState } from 'react';
@@ -30,51 +29,128 @@ export default function QuoteForm() {
     }
   };
 
+  const Label = ({ text, required }) => (
+    <label className="text-sm font-medium mb-1 block">
+      {text} {required && <span className="text-red-500">*</span>}
+    </label>
+  );
+
   return (
     <div className="max-w-6xl mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold mb-6">Request a Glass Service Quote</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <select name="serviceType" className="select select-bordered w-full" required onChange={handleChange}>
-          <option disabled selected>--Select--</option>
-          <option>Auto Glass</option>
-          <option>Residential Glass</option>
-          <option>Commercial Glass</option>
-        </select>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input name="firstName" onChange={handleChange} type="text" placeholder="First Name*" className="input input-bordered w-full" required />
-          <input name="lastName" onChange={handleChange} type="text" placeholder="Last Name*" className="input input-bordered w-full" required />
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <Label text="Inquiry Type" required={true} />
+          <select name="serviceType" className="select select-bordered w-full" required onChange={handleChange}>
+            <option disabled selected value="">--Select--</option>
+            <option>Auto Glass</option>
+            <option>Residential Glass</option>
+          </select>
         </div>
 
-        <input name="companyName" onChange={handleChange} type="text" placeholder="Company Name" className="input input-bordered w-full" />
-        <input name="email" onChange={handleChange} type="email" placeholder="Email*" className="input input-bordered w-full" required />
-        <input name="primaryPhone" onChange={handleChange} type="tel" placeholder="Primary Phone*" className="input input-bordered w-full" required />
-        <input name="secondaryPhone" onChange={handleChange} type="tel" placeholder="Secondary Phone" className="input input-bordered w-full" />
-        <input name="address" onChange={handleChange} type="text" placeholder="Street Address*" className="input input-bordered w-full" required />
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input name="city" onChange={handleChange} type="text" placeholder="City" className="input input-bordered w-full" />
-          <input name="zip" onChange={handleChange} type="text" placeholder="Zip Code" className="input input-bordered w-full" />
+          <div>
+            <Label text="First Name" required={true} />
+            <input name="firstName" onChange={handleChange} type="text" className="input input-bordered w-full" required />
+          </div>
+          <div>
+            <Label text="Last Name" required={true} />
+            <input name="lastName" onChange={handleChange} type="text" className="input input-bordered w-full" required />
+          </div>
         </div>
 
-        <select name="contactMethod" onChange={handleChange} className="select select-bordered w-full" required>
-          <option>Primary Phone</option>
-          <option>Secondary Phone</option>
-          <option>Email</option>
-        </select>
-
-        <textarea name="description" onChange={handleChange} placeholder="Describe your needs*" className="textarea textarea-bordered w-full" required />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input name="carYear" onChange={handleChange} type="text" placeholder="Car Year" className="input input-bordered w-full" />
-          <input name="carMake" onChange={handleChange} type="text" placeholder="Car Make" className="input input-bordered w-full" />
-          <input name="carModel" onChange={handleChange} type="text" placeholder="Car Model" className="input input-bordered w-full" />
-          <input name="carBody" onChange={handleChange} type="text" placeholder="Car Body Style" className="input input-bordered w-full" />
+        <div>
+          <Label text="Company Name" />
+          <input name="companyName" onChange={handleChange} type="text" className="input input-bordered w-full" />
         </div>
 
-        <input name="vin" onChange={handleChange} type="text" placeholder="Car VIN Number" className="input input-bordered w-full" />
+        <div>
+          <Label text="Email" required={true} />
+          <input name="email" onChange={handleChange} type="email" className="input input-bordered w-full" required />
+        </div>
+
+        <div>
+          <Label text="Preferred Contact Method" required={true} />
+          <select name="preferredMethod" onChange={handleChange} className="select select-bordered w-full" required>
+            <option disabled selected value="">--Select--</option>
+            <option>Email</option>
+            <option>Primary Phone</option>
+            <option>Secondary Phone</option>
+          </select>
+        </div>
+
+        <div>
+          <Label text="Primary Phone" required={true} />
+          <input name="primaryPhone" onChange={handleChange} type="tel" className="input input-bordered w-full" required />
+        </div>
+
+        <div>
+          <Label text="Secondary Phone" />
+          <input name="secondaryPhone" onChange={handleChange} type="tel" className="input input-bordered w-full" />
+        </div>
+
+        <div>
+          <Label text="Street Address" required={true} />
+          <input name="address" onChange={handleChange} type="text" className="input input-bordered w-full" required />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Label text="City" required={true} />
+            <input name="city" onChange={handleChange} type="text" className="input input-bordered w-full" required />
+          </div>
+          <div>
+            <Label text="Zip Code" required={true} />
+            <input name="zip" onChange={handleChange} type="text" className="input input-bordered w-full" required />
+          </div>
+        </div>
+
+        <div>
+          <Label text="Glass Repair/Replacement Needs" required={true} />
+          <textarea name="description" onChange={handleChange} className="textarea textarea-bordered w-full" required />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <Label text="Car Year" />
+            <input name="carYear" onChange={handleChange} type="text" className="input input-bordered w-full" />
+          </div>
+          <div>
+            <Label text="Car Make" />
+            <input name="carMake" onChange={handleChange} type="text" className="input input-bordered w-full" />
+          </div>
+          <div>
+            <Label text="Car Model" />
+            <input name="carModel" onChange={handleChange} type="text" className="input input-bordered w-full" />
+          </div>
+          <div>
+            <Label text="Car Body Style" />
+            <select name="carBody" onChange={handleChange} className="select select-bordered w-full">
+              <option disabled defaultValue={'None'} value="">--Select--</option>
+              <option>4 Door Sedan</option>
+              <option>4 Door Hatchback</option>
+              <option>SUV</option>
+              <option>2 Door Coupe</option>
+              <option>2 Door Convertible</option>
+              <option>2 Door Hatchback</option>
+              <option>4 Door Truck</option>
+              <option>2 Door Truck</option>
+              <option>2 Door Extended Cab Truck</option>
+              <option>2 Door Single Cab Truck</option>
+              <option>Van</option>
+              <option>Mini Van</option>
+              <option>Station Wagon</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <Label text="Car VIN Number" />
+          <input name="vin" onChange={handleChange} type="text" className="input input-bordered w-full" />
+        </div>
+
         <p className="text-sm text-warning">
-          <strong>ATTENTION:</strong> For 2016+ windshields and backglass, VIN is required.
+          <strong>ATTENTION DEAR CUSTOMER:</strong> For windshield and backglass replacements on 2016 and newer vehicles, the VIN is required to ensure the correct fit and specifications.
         </p>
 
         <button type="submit" className="btn btn-primary w-full">Submit</button>

@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Areas() {
   return (
-        <section className="bg-primary mt-10 text-black py-16">
+    <section className="bg-primary mt-10 text-black py-16">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
         {/* Left Column */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-center">
           <div>
             <h2 className="text-3xl font-bold mb-4">Dear Valued Customers</h2>
             <div className="w-16 h-[2px] bg-black mb-6"></div>
@@ -18,9 +18,6 @@ export default function Areas() {
               customers' full satisfaction.
             </p>
           </div>
-          <div className="mt-6">
-            <Image src={img1} alt="badge" className="w-md h-auto" />
-          </div>
         </div>
 
         {/* Right Column */}
@@ -29,7 +26,7 @@ export default function Areas() {
             <h2 className="text-3xl font-bold mb-4">Areas We Serve</h2>
             <div className="w-16 h-[2px] bg-black mb-6"></div>
           </div>
-          <div className="grid grid-cols-3 gap-4 text-left mt-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left mt-auto">
             {[
               "Dallas", "Plano", "Frisco", "McKinney", "Celina", "Prosper", "The Colony", "Allen",
               "Lewisville", "Little Elm", "Coppell", "Flower Mound", "Grapevine", "South Lake", "Addison", "Farmers Branch",
@@ -47,4 +44,3 @@ export default function Areas() {
     </section>
   );
 }
-

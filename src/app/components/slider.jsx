@@ -41,7 +41,7 @@ const Slider = () => {
         <p className="text-white text-lg md:text-xl mb-6 max-w-2xl">
           When it comes to auto glass repair and replacement, trust and transparency are essential. With a commitment to transparent pricing and trusted glass experts, customers can feel confident knowing they are getting high-quality service without hidden fees or unexpected costs.
         </p>
-        <Link className="btn btn-primary p-6 text-xl" href={'/quote'}>GET A FREE ESTIMATE</Link>
+        <Link className="btn btn-primary hover:text-primary hover:bg-black p-6 text-xl" href={'/quote'}>GET A FREE ESTIMATE</Link>
       </div>
     </div>
   );

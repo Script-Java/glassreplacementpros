@@ -1,60 +1,49 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import QuoteForm from "../components/quoteForm";
+import Image from "next/image";
+import img1 from "../assets/img/quote/1.jpg"; // Adjust the path as necessary
 
 export default function QuotePage() {
   return (
     <div className="">
       <Navbar />
+    <div className="relative w-full h-[400px]">
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-     <section className="py-20 my-20 px-6 text-center max-w-6xl mx-auto">
-  <h1 className="text-5xl font-extrabold mb-6 text-primary">Free Glass Quote</h1>
-  <p className="text-lg mb-4 text-neutral-content">
-    Thank you for choosing Glass Replacement Pros for your auto and residential glass needs.
-  </p>
-  <p className="mb-10 text-base-content">
-    We proudly provide fast, mobile, and affordable glass services across the Dallas-Fort Worth area. Whether it’s a cracked windshield, a shattered home window, or a custom glass installation, our certified team is ready to help.
-  </p>
+      {/* Static Background Image */}
+      <Image
+        src={img1}
+        alt="Hero Background"
+        fill
+        className="object-cover z-0"
+        priority
+      />
 
-  <div className="bg-base-100 rounded-xl shadow-xl p-8 text-left text-[17px] space-y-6 border border-base-300">
-    <p>
-      With skilled technicians at <span className="font-semibold text-primary">Glass Replacement Pros</span>, you can expect top-tier workmanship, friendly service, and reliable results every time. We back all our services with a lifetime workmanship guarantee.
-    </p>
-
-    <div>
-      <h2 className="text-2xl font-bold text-primary mb-2">Why Choose Glass Replacement Pros?</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li><strong>We Come to You:</strong> Mobile service across DFW—no need to leave your location.</li>
-        <li><strong>Top-Quality Materials:</strong> We use glass that meets or exceeds OEM standards.</li>
-        <li><strong>Experienced Team:</strong> Over 20 years of hands-on glass repair and replacement expertise.</li>
-        <li><strong>Customer-First Service:</strong> Clear communication, honest pricing, and satisfaction guaranteed.</li>
-      </ul>
+      {/* Title in the center */}
+      <div className="absolute inset-0 z-20 flex items-center justify-center">
+        <h1 className="text-white text-4xl md:text-5xl uppercase font-bold">REQUEST FREE QUOTE</h1>
+      </div>
     </div>
 
-    <div>
-      <h2 className="text-2xl font-bold text-primary mb-2">What We Offer:</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Mobile Windshield Repair & Replacement</li>
-        <li>Residential Glass & Window Solutions</li>
-        <li>Emergency Glass Repair & Same-Day Service</li>
-        <li>Custom Glass Projects for Homes & Offices</li>
-      </ul>
-    </div>
-
-    <div>
-      <h2 className="text-2xl font-bold text-primary mb-2">How It Works:</h2>
-      <ol className="list-decimal pl-6 space-y-2">
-        <li><strong>Submit Your Info:</strong> Use the quote form below to tell us about your needs.</li>
-        <li><strong>Get a Quick Reply:</strong> We’ll follow up with pricing and appointment details.</li>
-        <li><strong>Enjoy Stress-Free Service:</strong> We fix your glass on-site—fast and professionally.</li>
-      </ol>
-    </div>
-
-    <p className="text-lg font-semibold">
-      Ready to get started? Fill out the form below and let <span className="text-primary">Glass Replacement Pros</span> take care of your glass with confidence.
-    </p>
-  </div>
-</section>
+    <section className="bg-primary text-black py-20 px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-8">
+          PROVIDING SUPERIOR GLASS AND WINDOW SERVICE IN DFW!
+        </h1>
+        <p className="text-lg md:text-xl mb-4">
+          Thank you for your interest in our glass repair and replacement services.
+        </p>
+        <p className="text-lg md:text-xl mb-4">
+          We are a fast, reliable, with the best mobile glass service provider in DFW.
+        </p>
+        <p className="text-lg md:text-xl">
+          Our certified technicians are waiting to replace your glass. We only use
+          top-quality glass, providing 100% guaranteed workmanship.
+        </p>
+      </div>
+    </section>
 
       <QuoteForm />
       <Footer />
