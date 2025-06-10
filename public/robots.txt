@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block private or duplicate areas (adjust to your routing)
+Disallow: /admin
+Disallow: /api/
+
+# Point crawlers to the sitemap
+Sitemap: https://glassreplacementpros.com/sitemap.xml
