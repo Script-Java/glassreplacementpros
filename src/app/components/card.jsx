@@ -34,7 +34,7 @@ const Card = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <div className="w-full bg-primary text-black py-4 px-4">
+      <div className="w-full bg-primary text-black py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl uppercase font-bold mb-6 leading-tight">
             Innovative . Reliable . Honest

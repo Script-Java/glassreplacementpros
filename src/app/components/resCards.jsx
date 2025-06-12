@@ -46,7 +46,7 @@ At Glass Replacement Pros, we provide expert window installation for new home co
             <br />
             <span className="font-bold text-3xl">
               Call us today at{" "}
-              <Link className="underline" href={"tel:+19729007559"}>
+              <Link className="text-gray-600" href={"tel:+19729007559"}>
                 (972) 900-7559
               </Link>
             </span>

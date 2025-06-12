@@ -62,19 +62,20 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
             <br />
             <span className="font-bold text-3xl">
               Call us today at{" "}
-              <Link className="underline" href={"tel:+19729007559"}>
+              <Link className="text-gray-600" href={"tel:+19729007559"}>
                 (972) 900-7559
               </Link>
             </span>
           </p>
         </div>
       </div>
-    <div className="w-full max-w-7xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center gap-10">
-      {/* Image and Title Section */}
-      <div className="w-full md:w-1/2 flex flex-col items-start space-y-6">
-        <h2 className="text-4xl font-extrabold text-primary border-t-2 border-primary pt-4 text-start">
+<div className="">
+                <h2 className="text-4xl max-w-6xl mx-auto font-extrabold text-primary border-b-2 mt-10 border-black pb-4 text-center">
           Your Trusted Auto Glass Pros
         </h2>
+    <div className="w-full max-w-7xl mx-auto py-10 px-6 flex flex-col md:flex-row items-center gap-10">
+      {/* Image and Title Section */}
+      <div className="w-full md:w-1/2 flex flex-col items-start space-y-6">
         <div className="relative h-[700px] w-full rounded-xl overflow-hidden shadow-lg">
           <Image
             src={img9}
@@ -95,7 +96,11 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
             "Certified & Trained Experts – Skilled auto glass specialists and residential glass technicians with professional certifications.",
             "Senior Discounts Available – Affordable pricing with special discounts for seniors.",
             "No Hidden Fees – Upfront pricing with no surprises or extra charges.",
-            "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas."
+            "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas.",
+            "Emergency Glass Repair – Quick-response service for urgent glass damage to keep you safe and secure.",
+"Eco-Friendly Disposal – We responsibly recycle old and broken glass to minimize environmental impact.",
+"Locally Trusted – Backed by hundreds of satisfied customers across the Dallas-Fort Worth area."
+
           ].map((text, idx) => (
             <li key={idx} className="flex items-start gap-2">
               <FaCheckCircle className="text-primary mt-[2px] w-5 h-5 shrink-0" />
@@ -106,14 +111,15 @@ At Glass Replacement Pros, we provide affordable aftermarket and premium auto gl
         </ul>
       </div>
     </div>
+</div>
 
    
 
       {/* Content Section */}
 
   
-<div className="w-full bg-base-100 py-20 px-6">
-  <div className="max-w-7xl mx-auto space-y-24">
+<div className="w-full bg-base-100  px-6">
+  <div className="max-w-7xl mx-auto space-y-10">
     {slides.map((slide, i) => (
       <div
         key={i}

@@ -21,7 +21,7 @@ export default function ResSlider() {
 
       {/* Title in the center */}
       <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <h1 className="text-white text-4xl md:text-5xl uppercase font-bold">Residential Glass Repair & Replacement in Dallas</h1>
+        <h1 className="text-white text-4xl md:text-6xl uppercase font-bold">Residential Glass Repair & Replacement in Dallas</h1>
       </div>
     </div>
   );

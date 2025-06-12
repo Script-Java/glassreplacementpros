@@ -150,7 +150,7 @@ export default function QuoteForm() {
           <input name="vin" onChange={handleChange} type="text" className="input input-bordered w-full" />
         </div>
 
-        <p className="text-sm text-warning">
+        <p className="text-sm text-red-700">
           <strong>ATTENTION DEAR CUSTOMER:</strong> For windshield and backglass replacements on 2016 and newer vehicles, the VIN is required to ensure the correct fit and specifications.
         </p>
 

@@ -8,7 +8,7 @@ export default function QuotePage() {
   return (
     <div className="">
       <Navbar />
-    <div className="relative w-full h-[400px]">
+    <div className="relative w-full h-[500px]">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
 
