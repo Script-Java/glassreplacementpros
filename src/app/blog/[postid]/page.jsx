@@ -2,8 +2,8 @@ import getFormattedDate from "@/lib/getFormattedDate";
 import { getSortedPostsData, getPostData } from "@/lib/markdown";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/navbar";
+import Footer from "@/app/components/footer";
 
 export function generateStaticParams() {
     const posts = getSortedPostsData();
