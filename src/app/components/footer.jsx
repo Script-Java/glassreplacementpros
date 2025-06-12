@@ -8,14 +8,14 @@ const Footer = () => {
 
   return (
     <footer className="text-white text-sm bg-[#1f1f1f]">
-      <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-6 border-b border-gray-600">
+      <div className="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-6 border-b border-gray-600">
         <div className="flex items-center gap-2">
           <FaPhone className="text-white" />
-          <Link href="tel:9729007559">(972) 900-7559</Link>
+          <Link href="tel:9729007559" className="hover:text-primary">(972) 900-7559</Link>
         </div>
         <div className="flex items-center gap-2">
           <IoIosMail className="text-white" />
-          <Link href="mailto:info@glassreplacementpros.com">
+          <Link href="mailto:info@glassreplacementpros.com" className="hover:text-primary">
             info@glassreplacementpros.com
           </Link>
         </div>
@@ -29,11 +29,11 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-center md:justify-start gap-6 text-sm">
           <Link href="/" className="text-primary font-medium">WELCOME</Link>
           <span className="hidden md:inline text-gray-400">|</span>
-          <Link href="/auto">AUTO GLASS</Link>
+          <Link href="/auto" className="hover:text-primary">AUTO GLASS</Link>
           <span className="hidden md:inline text-gray-400">|</span>
-          <Link href="/residential">RESIDENTIAL GLASS</Link>
+          <Link href="/residential" className="hover:text-primary">RESIDENTIAL GLASS</Link>
           <span className="hidden md:inline text-gray-400">|</span>
-          <Link href="/quote">REQUEST FREE QUOTE</Link>
+          <Link href="/quote" className="hover:text-primary">REQUEST FREE QUOTE</Link>
         </div>
       </div>
 

@@ -38,13 +38,14 @@ const Slider = () => {
 
       {/* Static Text Content */}
       <div className="absolute inset-0 bg-black/50 z-10 flex flex-col justify-center items-center text-center px-4">
-        <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">
-          Transparent Pricing & Trusted Glass Experts
+        <h2 className="text-white text-4xl md:text-6xl font-bold mb-4 max-w-7xl">
+          Transparent Pricing & Trusted Glass Experts in Auto Glass and Residential
         </h2>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-2xl">
-          When it comes to auto glass repair and replacement, trust and transparency are essential. With a commitment to transparent pricing and trusted glass experts, customers can feel confident knowing they are getting high-quality service without hidden fees or unexpected costs.
+        <p className="text-white text-lg md:text-xl my-4 max-w-7xl">
+When it comes to auto glass repair and replacement, trust and transparency are essential. With a commitment to transparent pricing and trusted glass experts, customers can feel confident knowing they are getting high-quality service without hidden fees or unexpected costs. Whether it's a minor chip or a full windshield replacement, skilled professionals ensure precision, durability, and safety. Backed by years of experience and the latest technology, these experts provide reliable solutions tailored to each vehicle’s needs. Get the clarity and protection your car deserves with a team dedicated to excellence and honest service.
+
         </p>
-        <Link className="btn btn-primary hover:text-primary hover:bg-black p-6 text-xl" href={'/quote'}>GET A FREE ESTIMATE</Link>
+        <Link className="btn btn-primary hover:text-primary hover:bg-black p-6 text-xl mt-10" href={'/quote'}>GET YOUR ONLINE QUOTE TODAY</Link>
       </div>
     </div>
   );

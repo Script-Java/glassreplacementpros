@@ -44,7 +44,7 @@ const Card = () => {
             <br />
             <span className="font-bold">
               Call today:{" "}
-              <Link className="underline" href={"tel:+19729007559"}>
+              <Link className="text-gray-700" href={"tel:+19729007559"}>
                 (972) 900-7559
               </Link>
             </span>
@@ -56,7 +56,7 @@ const Card = () => {
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-t-2 border-black inline-block pt-4">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-b-2 border-black inline-block pb-4">
         Expert Auto & Residential Glass Services
       </h2>
     </div>
@@ -113,49 +113,46 @@ const Card = () => {
   </div>
 </section>
 
-
-    <div className="w-full  max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
-      {/* Image and Title Section */}
-      <div className="w-full md:w-1/2 flex flex-col items-start space-y-6">
-        <h2 className="text-4xl font-extrabold text-primary border-t-2 border-black pt-4 text-start">
-          WHY CHOOSE US?
-        </h2>
-        <div className="relative h-[700px] w-full rounded-xl overflow-hidden shadow-lg">
-          <Image
-            src={img6}
-            alt="Green classic car glass repair"
-            fill
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      {/* List Section */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center text-base-content space-y-5">
-        <ul className="space-y-4 text-lg">
-          {[
-            "Free Estimates – Get a free auto glass repair or residential glass replacement estimate with no obligation.",
-            "Licensed & Insured – We are a fully licensed and insured glass company, ensuring peace of mind.",
-            "Background-Checked Technicians – Our certified glass specialists are vetted for safety and reliability.",
-            "Certified & Trained Experts – Skilled auto glass specialists and residential glass technicians with professional certifications.",
-            "Senior Discounts Available – Affordable pricing with special discounts for seniors.",
-            "No Hidden Fees – Upfront pricing with no surprises or extra charges.",
-            "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas.",
-            "Lifetime Warranty – We stand behind our work with a lifetime warranty on workmanship and materials.",
-            "Fast Turnaround – Same-day or next-day service available to minimize your wait time.",
-            "Locally Owned & Operated – Proudly serving the Dallas community with personalized, hometown service."
-
-
-          ].map((text, idx) => (
-            <li key={idx} className="flex items-start gap-2">
-              <FaCheckCircle className="text-primary mt-[2px] w-5 h-5 shrink-0" />
-              <span>{text}</span>
-            </li>
-
-          ))}
-        </ul>
-      </div>
+<div className="w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-10">
+  {/* Image and Title Section */}
+  <div className="w-full md:w-1/2 flex flex-col justify-start space-y-6">
+    <h2 className="text-4xl font-extrabold text-primary text-start">
+      WHY CHOOSE US?
+    </h2>
+    <div className="relative h-[700px] w-full rounded-xl overflow-hidden shadow-lg">
+      <Image
+        src={img6}
+        alt="Green classic car glass repair"
+        fill
+        className="object-cover w-full h-full"
+      />
     </div>
+  </div>
+
+  {/* List Section */}
+  <div className="w-full md:w-1/2 flex flex-col justify-start pt-[76px] text-base-content space-y-5">
+    <ul className="space-y-4 text-lg">
+      {[
+        "Free Estimates – Get a free auto glass repair or residential glass replacement estimate with no obligation.",
+        "Licensed & Insured – We are a fully licensed and insured glass company, ensuring peace of mind.",
+        "Background-Checked Technicians – Our certified glass specialists are vetted for safety and reliability.",
+        "Certified & Trained Experts – Skilled auto glass specialists and residential glass technicians with professional certifications.",
+        "Senior Discounts Available – Affordable pricing with special discounts for seniors.",
+        "No Hidden Fees – Upfront pricing with no surprises or extra charges.",
+        "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas.",
+        "Lifetime Warranty – We stand behind our work with a lifetime warranty on workmanship and materials.",
+        "Fast Turnaround – Same-day or next-day service available to minimize your wait time.",
+        "Locally Owned & Operated – Proudly serving the Dallas community with personalized, hometown service."
+      ].map((text, idx) => (
+        <li key={idx} className="flex items-start gap-2">
+          <FaCheckCircle className="text-primary mt-[2px] w-5 h-5 shrink-0" />
+          <span>{text}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
 
       {/* Services Section */}
       <div className="w-full bg-base-100 py-10 px-4">
