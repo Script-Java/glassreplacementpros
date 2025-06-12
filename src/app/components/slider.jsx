@@ -2,10 +2,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import img1 from "../assets/img/slider/1.jpg";
+import img2 from "../assets/img/slider/2.jpg";
+import img3 from "../assets/img/slider/3.jpg";
+import img4 from "../assets/img/slider/4.jpg";
 
 import Link from "next/link";
 
-const slides = [img1];
+const slides = [img1, img2, img3, img4];
 
 const Slider = () => {
   const [current, setCurrent] = useState(0);

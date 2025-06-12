@@ -2,11 +2,8 @@
 
 export default function TrustindexWidget() {
   return (
-    <section className="my-16 px-4 max-w-7xl mx-auto">
+    <section className="my-4 px-4 max-w-7xl mx-auto">
       <div className="text-center mx-auto">
-        <h3 className="text-3xl font-bold mb-6 text-primary">
-          What Our Customers Say
-        </h3>
         <iframe
           src="https://cdn.trustindex.io/amp-widget.html#666872b47660581de0769193fd9"
           style={{

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import satisfaction from "../assets/img/satisfaction.jpg";
+import satisfaction from "../assets/img/satisfaction.png";
 import Link from "next/link";
 
 export default function Satisfaction() {

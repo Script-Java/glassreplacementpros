@@ -34,7 +34,7 @@ const Card = () => {
   return (
     <section className="w-full">
       {/* Hero Section */}
-      <div className="w-full bg-primary text-black py-20 px-4">
+      <div className="w-full bg-primary text-black py-4 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl uppercase font-bold mb-6 leading-tight">
             Innovative . Reliable . Honest
@@ -52,11 +52,11 @@ const Card = () => {
         </div>
       </div>
 
-<section className="w-full bg-base-100 py-20 px-6">
+<section className="w-full bg-base-100 py-10 px-6">
   <div className="max-w-7xl mx-auto">
     {/* Section Heading */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-t-2 border-primary inline-block pt-4">
+      <h2 className="text-4xl md:text-5xl font-extrabold text-primary border-t-2 border-black inline-block pt-4">
         Expert Auto & Residential Glass Services
       </h2>
     </div>
@@ -105,15 +105,19 @@ const Card = () => {
           </div>
         ))}
       </div>
+
     </div>
+          <div className="flex items-center justify-center mt-10">
+        <Link href={'/quote'} className="btn btn-primary text-xl p-4 uppercase hover:bg-black hover:text-primary">Get in Touch</Link>
+        </div>
   </div>
 </section>
 
 
-    <div className="w-full max-w-7xl mx-auto py-20 px-6 flex flex-col md:flex-row items-center gap-10">
+    <div className="w-full  max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
       {/* Image and Title Section */}
       <div className="w-full md:w-1/2 flex flex-col items-start space-y-6">
-        <h2 className="text-4xl font-extrabold text-primary border-t-2 border-primary pt-4 text-start">
+        <h2 className="text-4xl font-extrabold text-primary border-t-2 border-black pt-4 text-start">
           WHY CHOOSE US?
         </h2>
         <div className="relative h-[700px] w-full rounded-xl overflow-hidden shadow-lg">
@@ -136,7 +140,12 @@ const Card = () => {
             "Certified & Trained Experts – Skilled auto glass specialists and residential glass technicians with professional certifications.",
             "Senior Discounts Available – Affordable pricing with special discounts for seniors.",
             "No Hidden Fees – Upfront pricing with no surprises or extra charges.",
-            "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas."
+            "Free Mobile Service – Our mobile auto glass repair and windshield replacement service come to you anywhere in Dallas and surrounding areas.",
+            "Lifetime Warranty – We stand behind our work with a lifetime warranty on workmanship and materials.",
+            "Fast Turnaround – Same-day or next-day service available to minimize your wait time.",
+            "Locally Owned & Operated – Proudly serving the Dallas community with personalized, hometown service."
+
+
           ].map((text, idx) => (
             <li key={idx} className="flex items-start gap-2">
               <FaCheckCircle className="text-primary mt-[2px] w-5 h-5 shrink-0" />
@@ -149,8 +158,8 @@ const Card = () => {
     </div>
 
       {/* Services Section */}
-      <div className="w-full bg-base-100 py-20 px-4">
-        <div className="max-w-7xl mx-auto grid gap-20">
+      <div className="w-full bg-base-100 py-10 px-4">
+        <div className="max-w-7xl mx-auto grid ">
           {slides.map((slide, i) => (
             <div
               key={i}

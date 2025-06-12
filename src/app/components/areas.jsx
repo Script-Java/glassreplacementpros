@@ -4,18 +4,20 @@ import Image from "next/image";
 export default function Areas() {
   return (
     <section className="bg-primary mt-10 text-black py-16">
+      <h2 className="text-center text-4xl font-bold uppercase mb-8">Greater Dallas Mobile Service</h2>
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-stretch">
         {/* Left Column */}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col border-b-2 lg:border-b-0 lg:border-r-2 border-white pb-6 lg:pb-0 lg:pr-8">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Dear Valued Customers</h2>
-            <div className="w-16 h-[2px] bg-black mb-6"></div>
             <p className="text-lg leading-relaxed">
-              At Dallas Glass and Auto, our experienced professionals are dedicated to
+              At Glass Replacement Pros, our experienced professionals are dedicated to
               providing top-quality auto glass repair and replacement services
               in Dallas. We use the highest-grade glass and state-of-the-art
               tools to ensure every job is completed with precision and to our
               customers' full satisfaction.
+              <br /><br />
+                          At Glass Replacement Pros, we take pride in delivering expert auto and residential glass services across Texas.
+
             </p>
           </div>
         </div>
@@ -23,8 +25,6 @@ export default function Areas() {
         {/* Right Column */}
         <div className="flex flex-col justify-between">
           <div>
-            <h2 className="text-3xl font-bold mb-4">Areas We Serve</h2>
-            <div className="w-16 h-[2px] bg-black mb-6"></div>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left mt-auto">
             {[
@@ -34,7 +34,7 @@ export default function Areas() {
               "Irving", "Duncanville", "Desoto", "Lancaster", "Carrollton", "Rowlett", "Cedar Hill", "Princeton",
             ].map((city, i) => (
               <div key={i} className="flex items-center space-x-2">
-                <span className="text-lg">→</span>
+                <span className="text-lg text-white">→</span>
                 <span>{city}</span>
               </div>
             ))}
