@@ -6,7 +6,7 @@ import img1 from '../assets/img/res/slider/1.jpg';
 
 export default function ResSlider() {
   return (
-    <div className="relative w-full h-[400px]">
+    <div className="relative w-full h-[500px]">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40 z-10" />
 

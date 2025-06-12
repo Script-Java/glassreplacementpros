@@ -7,7 +7,8 @@ export default function Areas() {
       <h2 className="text-center text-4xl font-bold uppercase mb-8">Greater Dallas Mobile Service</h2>
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
-        <div className="flex flex-col border-b-2 lg:border-b-0 lg:border-r-2 border-white pb-6 lg:pb-0 lg:pr-8">
+        <div className="flex flex-col lg:self-stretch border-b-2 lg:border-b-0 lg:border-r-2 border-white pb-6 lg:pb-0 lg:pr-8 h-full">
+
 
           <div>
             <p className="text-lg leading-relaxed">
