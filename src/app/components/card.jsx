@@ -107,7 +107,7 @@ const Card = () => {
       </div>
 
     </div>
-          <div className="flex items-center justify-center mt-10">
+          <div className="flex items-center justify-center mt-20">
         <Link href={'/quote'} className="btn btn-primary text-xl p-4 uppercase hover:bg-black hover:text-primary">Get in Touch</Link>
         </div>
   </div>

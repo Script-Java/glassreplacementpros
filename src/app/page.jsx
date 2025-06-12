@@ -16,7 +16,7 @@ const TrustindexWidget = dynamic(() => import("./components/reviews"), { ssr: fa
 
 export default function Home() {
   return (
-    <div  className="hide-scrollbar bg-base-100 text-white overflow-y-scroll">
+    <div  className="bg-base-100 text-white">
       <Navbar />
       <Slider />
       <Card />

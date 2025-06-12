@@ -5,29 +5,28 @@ export default function Areas() {
   return (
     <section className="bg-primary mt-10 text-black py-16">
       <h2 className="text-center text-4xl font-bold uppercase mb-8">Greater Dallas Mobile Service</h2>
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 relative">
         {/* Left Column */}
-        <div className="flex flex-col lg:self-stretch border-b-2 lg:border-b-0 lg:border-r-2 border-white pb-6 lg:pb-0 lg:pr-8 h-full">
+        <div className="relative flex items-center">
+          {/* Full-height border element */}
+          <div className="hidden lg:block absolute top-0 right-0 h-full w-[2px] bg-white"></div>
 
-
-          <div>
-            <p className="text-lg leading-relaxed">
+          {/* Content */}
+          <div className="flex flex-col justify-center pr-8 text-lg leading-relaxed">
+            <p>
               At Glass Replacement Pros, our experienced professionals are dedicated to
               providing top-quality auto glass repair and replacement services
               in Dallas. We use the highest-grade glass and state-of-the-art
               tools to ensure every job is completed with precision and to our
               customers' full satisfaction.
               <br /><br />
-                          At Glass Replacement Pros, we take pride in delivering expert auto and residential glass services across Dallas and surrounding area.
-
+              At Glass Replacement Pros, we take pride in delivering expert auto and residential glass services across Dallas and surrounding area.
             </p>
           </div>
         </div>
 
         {/* Right Column */}
         <div className="flex flex-col justify-between">
-          <div>
-          </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-left mt-auto">
             {[
               "Dallas", "Plano", "Frisco", "McKinney", "Celina", "Prosper", "The Colony", "Allen",
