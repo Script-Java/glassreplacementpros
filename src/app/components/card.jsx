@@ -37,7 +37,7 @@ const Card = () => {
       <div className="w-full bg-primary text-black py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl uppercase font-bold mb-6 leading-tight">
-            Innovative . Reliable . Honest
+            Innovative . Reliable . Transparent
           </h1>
           <p className="text-2xl md:text-4xl uppercase font-bold mx-auto leading-relaxed">
             Most Affordable Prices in Dallas and Surrounding Areas!
