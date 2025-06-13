@@ -98,11 +98,11 @@ export default function QuoteForm() {
 
         <div><Label text="Car VIN Number" /><Input name="vin" /></div>
 
-        <p className="text-sm text-primary">
+        <p className="text-sm text-red-700">
           <strong>ATTENTION DEAR CUSTOMER:</strong> For windshield and backglass replacements on 2016 and newer vehicles, the VIN is required to ensure the correct fit and specifications.
         </p>
 
-        <button type="submit" className="btn bg-black text-white hover:bg-primary w-full">Submit</button>
+        <button type="submit" className="btn bg-gray-700 text-white hover:bg-primary w-full">Submit</button>
         {status && <p className="text-sm pt-2 text-info">{status}</p>}
       </form>
     </div>

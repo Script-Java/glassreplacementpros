@@ -32,9 +32,9 @@ const Navbar = () => {
 
         {/* Right Side Buttons + Hamburger */}
         <div className="flex items-center gap-4">
-          <ul className="hidden lg:flex items-center text-black gap-4">
+          <ul className="hidden lg:flex items-center gap-4">
             <li className="btn btn-outline text-white hover:text-black hover:bg-white transition-colors">
-              <Link href="tel:9729007559">(972) 900-7559</Link>
+              <Link href="tel:9729007559" className="text-white">(972) 900-7559</Link>
             </li>
             <li className="btn btn-primary hover:bg-black hover:text-primary transition-colors">
               <Link href="/quote">CONTACT US</Link>
@@ -55,7 +55,9 @@ const Navbar = () => {
       {/* Mobile Buttons Under Logo/Hamburger */}
       {isTinyScreen && (
         <div className="flex flex-col items-center gap-4 pb-4 px-4 lg:hidden">
-          <Link href="tel:9729007559" className="btn btn-outline w-full hover:text-primary hover:bg-white">(972) 900-7559</Link>
+          <Link href="tel:9729007559" className="btn btn-outline w-full text-white hover:text-primary hover:bg-white">
+            (972) 900-7559
+          </Link>
           <Link href="/quote" className="btn btn-primary w-full">
             CONTACT US
           </Link>
@@ -98,4 +100,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-              
