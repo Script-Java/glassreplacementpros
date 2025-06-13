@@ -64,16 +64,16 @@ const Navbar = () => {
 
       {/* Sidebar Menu - Slides from right */}
       <div
-        className={`fixed top-0 right-0 h-full w-96 bg-white shadow-lg transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 right-0 h-full w-96 bg-gray-700 shadow-lg transform transition-transform duration-300 z-40 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex justify-between items-center p-4">
-          <button className="text-2xl btn btn-ghost text-black hover:bg-primary hover:text-black" onClick={toggleMenu}>
+          <button className="text-2xl btn btn-ghost text-white hover:bg-primary hover:text-black" onClick={toggleMenu}>
             <MdClose />
           </button>
         </div>
-        <ul className="flex flex-col p-6 gap-4 text-black">
+        <ul className="flex flex-col p-6 gap-4 text-white">
           {[ 
             { label: "Home", href: "/" },
             { label: "Auto Glass", href: "/auto" },
