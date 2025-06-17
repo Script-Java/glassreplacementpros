@@ -2,31 +2,99 @@ import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { name, email, message } = req.body;
+    const form = req.body;
 
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "All fields are required." });
+    // Basic validation
+    if (!form.firstName || !form.lastName || !form.email || !form.serviceType || !form.description) {
+      return res.status(400).json({ error: "Missing required fields." });
     }
 
     try {
-      // Create a transporter
       const transporter = nodemailer.createTransport({
-        service: "gmail",
+        host: process.env.SMTP_HOST,
+        port: parseInt(process.env.SMTP_PORT),
+        secure: true,
         auth: {
-          user: process.env.EMAIL, // Your Gmail address
-          pass: process.env.EMAIL_PASS, // Your Gmail app password
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
         },
       });
 
-      // Email options
       const mailOptions = {
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        subject: `New Contact Form Submission from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      };
+        from: `"${form.firstName} ${form.lastName}" <info@glassreplacementpros.com>`,
+        to: process.env.SMTP_USER,
+        replyTo: form.email,
+        subject: `New Quote Request from ${form.firstName} ${form.lastName}`,
+            html: `
+    <div style="font-family: Arial, sans-serif; padding: 20px; border: 4px solid #ccc; border-radius: 10px; line-height: 1.6; color: #000;">
+<h2 style="margin-bottom: 20px;">New Request From</h2>
+<strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Replacement Pros</strong>
 
-      // Send the email
+      <p><strong>Please choose type of glass service needed:</strong><br/>
+      <a href="#">${form.serviceType || ''}</a></p>
+      <hr/>
+
+      <p><strong>Customer Name:</strong><br/>
+      <a href="#">${form.firstName || ''} ${form.lastName || ''}</a></p>
+      <hr/>
+
+      <p><strong>Company Name:</strong><br/>
+      ${form.companyName || 'N/A'}</p>
+      <hr/>
+
+      <p><strong>Email:</strong><br/>
+      <a href="mailto:${form.email}">${form.email}</a></p>
+      <hr/>
+
+      <p><strong>Primary Phone:</strong><br/>
+      <a href="tel:${form.primaryPhone}">${form.primaryPhone}</a></p>
+      <hr/>
+
+      <p><strong>Secondary Phone:</strong><br/>
+      <a href="tel:${form.secondaryPhone || ''}">${form.secondaryPhone || 'N/A'}</a></p>
+      <hr/>
+
+      <p><strong>Street Address:</strong><br/>
+      ${form.address || 'N/A'}</p>
+      <hr/>
+
+      <p><strong>City:</strong><br/>
+      <a href="#">${form.city || ''}</a></p>
+      <hr/>
+
+      <p><strong>Zip Code:</strong><br/>
+      <a href="#">${form.zip || ''}</a></p>
+      <hr/>
+
+      <p><strong>Preferred Method of Contact:</strong><br/>
+      <a href="#">${form.preferredMethod || ''}</a></p>
+      <hr/>
+
+      <p><strong>Please describe in detail your glass repair/replacement needs:</strong><br/>
+      <a href="#">${form.description || ''}</a></p>
+      <hr/>
+
+      <p><strong>Car Year (if applicable):</strong><br/>
+      <a href="#">${form.carYear || 'N/A'}</a></p>
+      <hr/>
+
+      <p><strong>Car Make (if applicable):</strong><br/>
+      <a href="#">${form.carMake || 'N/A'}</a></p>
+      <hr/>
+
+      <p><strong>Car Model (if applicable):</strong><br/>
+      <a href="#">${form.carModel || 'N/A'}</a></p>
+      <hr/>
+
+      <p><strong>Car Body Style (if applicable):</strong><br/>
+      <a href="#">${form.carBody || 'N/A'}</a></p>
+      <hr/>
+
+      <p><strong>VIN:</strong><br/>
+      <a href="#">${form.vin || 'N/A'}</a></p>
+    </div>
+  `,
+      };
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: "Message sent successfully!" });
     } catch (error) {

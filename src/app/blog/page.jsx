@@ -3,6 +3,7 @@ import Image from "next/image"; // Import Next.js Image component
 import { getSortedPostsData } from "@/lib/markdown";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import img1 from "../assets/img/blog1.jpg"; // Example image import, adjust path as necessary
 
 export default function Blog() {
     const posts = getSortedPostsData();
@@ -14,12 +15,27 @@ export default function Blog() {
     }
 
     return (
-        <div className="container m-auto p-4">
+        <div className="">
             <Navbar></Navbar>
-            <h3 className="text-5xl lg:text-6xl uppercase text-center lg:text-start p-4 my-20 font-bold">
-                All Blogs
-            </h3>
-
+                <div className="relative w-full h-[500px]">
+                  {/* Dark overlay */}
+                  <div className="absolute inset-0 bg-black/40 z-10" />
+            
+                  {/* Static Background Image */}
+                  <Image
+                    src={img1}
+                    alt="Hero Background"
+                    fill
+                    className="object-cover object-center z-0"
+                    priority
+                  />
+            
+                  {/* Title in the center */}
+                  <div className="absolute inset-0 z-20 flex items-center justify-center">
+                    <h1 className="text-white text-4xl md:text-6xl text-center uppercase font-bold">All Blogs</h1>
+                  </div>
+                </div>
+            <section className="max-w-7xl mx-auto px-4 text-base-content">
             <div className="grid my-40 grid-cols-1 lg:grid-cols-3 gap-6">
                 {posts.map((post) => (
                     <div key={post.id} className="card card-compact bg-base-100 lg:w-96 shadow-xl">
@@ -45,6 +61,7 @@ export default function Blog() {
                     </div>
                 ))}
             </div>
+            </section>
             <Footer></Footer>
         </div>
     );
