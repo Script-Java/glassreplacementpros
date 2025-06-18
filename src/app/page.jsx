@@ -3,11 +3,6 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Slider from "./components/slider";
 import Card from "./components/card";
-import Services from "./components/services";
-import Image from "next/image";
-import bgImage from "./assets/img/12.jpg";
-import Link from "next/link";
-import Triple from "./components/triple";
 import Satisfaction from "./components/satisfaction";
 import Areas from "./components/areas";
 

@@ -33,6 +33,8 @@ const Footer = () => {
           <span className="hidden md:inline text-gray-400">|</span>
           <Link href="/residential" className="hover:text-primary">RESIDENTIAL GLASS</Link>
           <span className="hidden md:inline text-gray-400">|</span>
+          <Link href="/blog" className="hover:text-primary">TIPS & TRICKS</Link>
+          <span className="hidden md:inline text-gray-400">|</span>
           <Link href="/quote" className="hover:text-primary">REQUEST FREE QUOTE</Link>
         </div>
       </div>
