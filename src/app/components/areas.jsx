@@ -13,6 +13,10 @@ export default function Areas() {
 
           {/* Content */}
           <div className="flex flex-col justify-center pr-8 text-lg leading-relaxed">
+                      <div>
+            <h2 className="text-3xl font-bold mb-4">Reliable Glass Solutions in Dallas</h2>
+            <div className="w-16 h-[2px] bg-white mb-6"></div>
+          </div>
             <p>
               At Glass Replacement Pros, our experienced professionals are dedicated to
               providing top-quality auto glass repair and replacement services

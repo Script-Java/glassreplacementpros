@@ -80,6 +80,7 @@ const Navbar = () => {
             { label: "Home", href: "/" },
             { label: "Auto Glass", href: "/auto" },
             { label: "Residential Glass", href: "/residential" },
+            { label: "Blogs", href: "/blog" },
             { label: "Online Quote", href: "/quote" },
           ].map(({ label, href }) => (
             <li key={label} className="btn btn-ghost text-left hover:bg-primary hover:text-white transition-colors">
