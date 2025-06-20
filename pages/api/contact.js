@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 <h2 style="margin-bottom: 20px;">New Request From</h2>
 <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Replacement Pros</strong>
 
-      <p><strong>Please choose type of glass service needed:</strong><br/>
+      <p><strong>Glass Service Needed:</strong><br/>
       <a href="#">${form.serviceType || ''}</a></p>
       <hr/>
 
@@ -70,7 +70,7 @@ export default async function handler(req, res) {
       <a href="#">${form.preferredMethod || ''}</a></p>
       <hr/>
 
-      <p><strong>Please describe in detail your glass repair/replacement needs:</strong><br/>
+      <p><strong>Details of glass repair/replacement needs:</strong><br/>
       <a href="#">${form.description || ''}</a></p>
       <hr/>
 
@@ -93,8 +93,7 @@ export default async function handler(req, res) {
       <p><strong>VIN:</strong><br/>
       <a href="#">${form.vin || 'N/A'}</a></p>
     </div>
-  `,
-      };
+  `,      };
       await transporter.sendMail(mailOptions);
       res.status(200).json({ message: "Message sent successfully!" });
     } catch (error) {
