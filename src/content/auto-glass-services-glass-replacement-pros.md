@@ -4,7 +4,7 @@ id: "auto-glass-services-glass-replacement-pros"
 title: "Trusted Auto Glass Replacement by Glass Replacement Pros"
 description: "Discover how Glass Replacement Pros delivers top-tier auto glass repair and replacement services, helping you stay safe, see clearly, and drive confidently—all with quick, affordable, and expert care."
 date: "2025-06-17"
-image: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compresscs=tinysrgbw=1260h=750dpr=1](https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)"
+image: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Trusted Auto Glass Replacement by Glass Replacement Pros
@@ -23,7 +23,7 @@ We replace and repair all vehicle glass, including:
 
 > **Coverage Tip:** No matter the vehicle make or model, we’ve got the tools and materials to restore it.
 
-![Auto Glass Full Service](https://images.pexels.com/photos/1007417/pexels-photo-1007417.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1)
+![Auto Glass Full Service](https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg)
 
 ---
 
@@ -37,7 +37,6 @@ Auto glass is a critical safety component. Our expert installation ensures:
 
 > **Safety Insight:** Your windshield helps support airbags and vehicle structure in a crash.
 
-![Auto Glass Safety](https://images.pexels.com/photos/193991/pexels-photo-193991.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1)
 
 ---
 
@@ -51,7 +50,6 @@ We know you’ve got places to be. That’s why we provide:
 
 > **Convenience Note:** Our mobile team comes to you—no need to rearrange your day.
 
-![Mobile Auto Glass](https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1)
 
 ---
 
@@ -65,7 +63,7 @@ Glass Replacement Pros works with most insurance carriers and offers:
 
 > **Insurance Tip:** Many policies cover auto glass with little or no deductible.
 
-![Affordable Glass Repair](https://images.pexels.com/photos/3859987/pexels-photo-3859987.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1)
+![Affordable Glass Repair](https://images.pexels.com/photos/451590/pexels-photo-451590.jpeg)
 
 ---
 
@@ -79,7 +77,6 @@ We proudly serve our local community with:
 
 > **Reputation Tip:** Our customers trust us to treat their cars like our own.
 
-![Trusted Auto Techs](https://images.pexels.com/photos/97075/pexels-photo-97075.jpeg?auto=compress\&cs=tinysrgb\&w=1260\&h=750\&dpr=1)
 
 ---
 
