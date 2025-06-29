@@ -55,7 +55,7 @@ export default async function handler(req, res) {
       <hr/>
 
       <p><strong>Street Address:</strong><br/>
-      ${form.address || 'N/A'}</p>
+        <a href="#">${form.address || 'N/A'}</a></p>
       <hr/>
 
       <p><strong>City:</strong><br/>
