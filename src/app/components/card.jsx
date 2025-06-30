@@ -184,6 +184,11 @@ const Card = () => {
           ))}
         </div>
       </div>
+    <div className="mt-12 flex flex-col items-center justify-center">
+      <Link href="/blog/how-to" className="btn bg-primary p-8 md:p-4 text-black hover:bg-black hover:text-primary">
+        HOW TO CARE FOR A NEWLY REPLACED WINDSHIELD AND BACK GLASS
+      </Link>
+    </div>
     </section>
   );
 };
