@@ -3,7 +3,7 @@ id: "how-to-care-new-windshield"
 title: "How to Care for a Newly Replaced Windshield and Back Glass"
 description: "Learn the essential steps to protect your new windshield, prevent damage, and extend its lifespan after replacement."
 date: "2025-06-29"
-image: "https://images.pexels.com/photos/228094/pexels-photo-228094.jpeg"
+image: "https://images.pexels.com/photos/32725827/pexels-photo-32725827.jpeg"
 
 ---
 
@@ -19,7 +19,7 @@ After installation, adhesives need time to cure. Generally, you should wait at l
 
 > **Safety Tip:** Ask your technician for the recommended wait time.
 
-![Wait Before Driving](https://images.pexels.com/photos/1765286/pexels-photo-1765286.jpeg)
+![Wait Before Driving](https://images.pexels.com/photos/32576691/pexels-photo-32576691.jpeg)
 
 ---
 
@@ -41,7 +41,7 @@ Heat buildup and air pressure can strain fresh seals. Leave windows slightly ope
 
 > **Pro Tip:** This also helps prevent water leaks during rain.
 
-![Windows Cracked](https://images.pexels.com/photos/175683/pexels-photo-175683.jpeg)
+![Windows Cracked](https://images.pexels.com/photos/32556990/pexels-photo-32556990.jpeg)
 
 ---
 
