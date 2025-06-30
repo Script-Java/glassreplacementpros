@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <ul className="hidden lg:flex items-center gap-4">
             <li className="btn btn-outline text-white hover:text-black hover:bg-white transition-colors">
-              <Link href="tel:9729007559" className="text-white">(972) 900-7559</Link>
+              <Link href="tel:9729007559" className="text-white hover:text-black">(972) 900-7559</Link>
             </li>
             <li className="btn btn-primary hover:bg-black hover:text-primary transition-colors">
               <Link href="/quote">CONTACT US</Link>
