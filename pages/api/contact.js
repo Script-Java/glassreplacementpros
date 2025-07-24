@@ -1,6 +1,13 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
+  const createMapLink = (query) => {
+  if (!query) return '#'; // Return a non-functional link if the query is empty
+  const encodedQuery = encodeURIComponent(query);
+  return `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+};
+
+
   if (req.method === "POST") {
     const form = req.body;
 
