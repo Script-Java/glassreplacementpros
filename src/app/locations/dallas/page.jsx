@@ -122,11 +122,11 @@ export default function DallasPage() {
                       <p className="mt-2 text-base text-slate-600">We use Original Equipment Manufacturer (OEM) or equivalent glass for a perfect fit and finish.</p>
                     </div>
                   </li>
-                  <li className="flex items-start">
+                   <li className="flex items-start">
                     <FaCheckCircle className="flex-shrink-0 h-6 w-6 text-success mt-1" />
                     <div className="ml-4">
-                      <h4 className="text-lg leading-6 font-medium text-slate-800">Insurance Claim Experts</h4>
-                      <p className="mt-2 text-base text-slate-600">We work directly with all major insurance providers to make your claim process seamless and stress-free.</p>
+                      <h4 className="text-lg leading-6 font-medium text-slate-800">Residential Glass Repair</h4>
+                      <p className="mt-2 text-base text-slate-600">From accidental breaks to weather damage, we provide fast and reliable residential glass repair to secure your home and restore your peace of mind quickly.</p>
                     </div>
                   </li>
                 </ul>
