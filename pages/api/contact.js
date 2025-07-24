@@ -35,7 +35,7 @@ export default async function handler(req, res) {
             html: `
 <div style="font-family: Arial, sans-serif; padding: 20px; border: 4px solid #ccc; border-radius: 10px; line-height: 1.6; color: #000;">
     <h2 style="margin-bottom: 20px;">New Request From</h2>
-    <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Go LLC</strong>
+    <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Replacement Pros</strong>
 
     <p><strong>Glass Service Needed:</strong><br/>
     <a href="#" style="text-decoration: none; color: #0066cc;">${form.serviceType || ''}</a></p>
