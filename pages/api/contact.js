@@ -45,22 +45,22 @@ export default async function handler(req, res) {
   <h2 style="margin-bottom: 20px;">New Request From</h2>
   <strong style="font-size: 20px; color: #d62828; display: block; margin-bottom: 20px; margin-top: 0;">Glass Replacement Pros</strong>
 
-  <p><strong>Glass Service Needed:</strong><br/><span style="color: blue; text-decoration: underline;">${form.serviceType || ''}</span></p><hr/>
-  <p><strong>Customer Name:</strong><br/><span style="color: blue; text-decoration: underline;">${form.firstName || ''} ${form.lastName || ''}</span></p><hr/>
-  <p><strong>Company Name:</strong><br/><span style="color: blue; text-decoration: underline;">${form.companyName || 'N/A'}</span></p><hr/>
-  <p><strong>Email:</strong><br/><a href="mailto:${form.email}" style="color: blue; text-decoration: underline;">${form.email}</a></p><hr/>
-  <p><strong>Primary Phone:</strong><br/><a href="tel:${form.primaryPhone}" style="color: blue; text-decoration: underline;">${form.primaryPhone}</a></p><hr/>
-  <p><strong>Secondary Phone:</strong><br/><a href="tel:${form.secondaryPhone || ''}" style="color: blue; text-decoration: underline;">${form.secondaryPhone || 'N/A'}</a></p><hr/>
-  <p><strong>Street Address:</strong><br/><a href="${createMapLink(form.address)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${form.address || 'N/A'}</a></p><hr/>
-  <p><strong>City:</strong><br/><a href="${createMapLink(form.city)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${form.city || ''}</a></p><hr/>
-  <p><strong>Zip Code:</strong><br/><a href="${createMapLink(form.zip)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: underline;">${form.zip || ''}</a></p><hr/>
-  <p><strong>Preferred Method of Contact:</strong><br/><span style="color: blue; text-decoration: underline;">${form.preferredMethod || ''}</span></p><hr/>
-  <p><strong>Details of glass repair/replacement needs:</strong><br/><span style="color: blue; text-decoration: underline;">${form.description || ''}</span></p><hr/>
-  <p><strong>Car Year (if applicable):</strong><br/><span style="color: blue; text-decoration: underline;">${form.carYear || 'N/A'}</span></p><hr/>
-  <p><strong>Car Make (if applicable):</strong><br/><span style="color: blue; text-decoration: underline;">${form.carMake || 'N/A'}</span></p><hr/>
-  <p><strong>Car Model (if applicable):</strong><br/><span style="color: blue; text-decoration: underline;">${form.carModel || 'N/A'}</span></p><hr/>
-  <p><strong>Car Body Style (if applicable):</strong><br/><span style="color: blue; text-decoration: underline;">${form.carBody || 'N/A'}</span></p><hr/>
-  <p><strong>VIN:</strong><br/><span style="color: blue; text-decoration: underline;">${form.vin || 'N/A'}</span></p>
+  <p><strong>Glass Service Needed:</strong><br/><span style="color: blue;">${form.serviceType || ''}</span></p><hr/>
+  <p><strong>Customer Name:</strong><br/><span style="color: blue;">${form.firstName || ''} ${form.lastName || ''}</span></p><hr/>
+  <p><strong>Company Name:</strong><br/><span style="color: blue;">${form.companyName || 'N/A'}</span></p><hr/>
+  <p><strong>Email:</strong><br/><a href="mailto:${form.email}" style="color: blue; text-decoration: none;">${form.email}</a></p><hr/>
+  <p><strong>Primary Phone:</strong><br/><a href="tel:${form.primaryPhone}" style="color: blue; text-decoration: none;">${form.primaryPhone}</a></p><hr/>
+  <p><strong>Secondary Phone:</strong><br/><a href="tel:${form.secondaryPhone || ''}" style="color: blue; text-decoration: none;">${form.secondaryPhone || 'N/A'}</a></p><hr/>
+  <p><strong>Street Address:</strong><br/><a href="${createMapLink(form.address)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: none;">${form.address || 'N/A'}</a></p><hr/>
+  <p><strong>City:</strong><br/><a href="${createMapLink(form.city)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: none;">${form.city || ''}</a></p><hr/>
+  <p><strong>Zip Code:</strong><br/><a href="${createMapLink(form.zip)}" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: none;">${form.zip || ''}</a></p><hr/>
+  <p><strong>Preferred Method of Contact:</strong><br/><span style="color: blue;">${form.preferredMethod || ''}</span></p><hr/>
+  <p><strong>Details of glass repair/replacement needs:</strong><br/><span style="color: blue;">${form.description || ''}</span></p><hr/>
+  <p><strong>Car Year (if applicable):</strong><br/><span style="color: blue;">${form.carYear || 'N/A'}</span></p><hr/>
+  <p><strong>Car Make (if applicable):</strong><br/><span style="color: blue;">${form.carMake || 'N/A'}</span></p><hr/>
+  <p><strong>Car Model (if applicable):</strong><br/><span style="color: blue;">${form.carModel || 'N/A'}</span></p><hr/>
+  <p><strong>Car Body Style (if applicable):</strong><br/><span style="color: blue;">${form.carBody || 'N/A'}</span></p><hr/>
+  <p><strong>VIN:</strong><br/><span style="color: blue;">${form.vin || 'N/A'}</span></p>
 </div>`,
     };
 
