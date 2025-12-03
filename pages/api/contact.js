@@ -65,7 +65,7 @@ export default async function handler(req, res) {
     };
 
     await transporter.sendMail(mailOptions);
-    return res.status(200).json({ message: "Message sent successfully! Thank you, we'll be in touch soon!" });
+    return res.status(200).json({ message: "Your Online Form was Successfully Submitted. We are going to review the Details that have been provided and respond as soon as possible." });
   } catch (error) {
     console.error("Error sending email:", error);
     return res.status(500).json({ error: "Failed to send message." });
