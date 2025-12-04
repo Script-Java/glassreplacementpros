@@ -17,7 +17,7 @@ export default function QuoteForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      setStatus(res.ok ? 'Message sent successfully! Thank you, We\'ll be in touch soon!' : 'Something went wrong.');
+      setStatus(res.ok ? "Your Online Form was Successfully Submitted. We are going to review the Details that have been provided and respond as soon as possible." : 'Something went wrong.');
       if (res.ok) e.target.reset();
     } catch {
       setStatus('Error submitting form.');
@@ -149,7 +149,7 @@ export default function QuoteForm() {
         </p>
 
         <button type="submit" className="btn bg-gray-700 text-white hover:bg-primary w-full">Submit</button>
-        {status && <p className="text-sm pt-2 font-bold text-success">{status}</p>}
+        {status && <p className="text-sm pt-2 font-bold text-blue-700">{status}</p>}
       </form>
     </div>
   );
