@@ -58,7 +58,7 @@ export default async function handler(req, res) {
     const slug = slugify(blogPost.title, { lower: true, strict: true });
     
     // Saves to: src/app/content/2024-01-01-windshield-tips.md
-    const filename = `src/app/content/${date}-${slug}.md`; 
+    const filename = `src/content/${date}-${slug}.md`; 
 
     const fileContent = `---
 title: "${blogPost.title}"
