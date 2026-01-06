@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Why Timely Repair Matters"
 date: "2025-12-07"
 description: "This blog post highlights the critical importance of windshield safety, discussing the risks associated with damaged windshields and the benefits of timely, professional repair to ensure safety and maintain the structural integrity of your vehicle."
+image: "/window.svg"
 ---
 
 
@@ -24,4 +25,5 @@ description: "This blog post highlights the critical importance of windshield sa
       ## Conclusion
       Windshield safety is not something to be taken lightly. By understanding the risks associated with damaged windshields and the benefits of professional repair, vehicle owners can make informed decisions about their safety on the road. Remember, a safe windshield is not just a legal requirement; it's a matter of life and death.
    
+
 

@@ -2,6 +2,7 @@
 title: "The Importance of Windshield Safety: Understanding the Role of Auto Glass in Vehicle Protection"
 date: "2025-12-05"
 description: "This blog post discusses the importance of windshield safety, highlighting the role of auto glass in vehicle protection, including preventing ejection, maintaining vehicle structure, and protecting from external elements. It also explores the different types of auto glass used in vehicles."
+image: "/window.svg"
 ---
 
 # Introduction to Windshield Safety
@@ -16,4 +17,5 @@ There are two primary types of auto glass: laminated and tempered.
 * **Tempered Glass**: Used for side and rear windows, tempered glass is designed to shatter into small, blunt pieces in the event of a collision, reducing the risk of injury.
 ## Conclusion
 In conclusion, windshield safety is a critical aspect of vehicle protection. By understanding the role of auto glass in preventing ejection, maintaining vehicle structure, and protecting from external elements, vehicle owners can appreciate the importance of proper windshield maintenance and repair.
+
 
