@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   // 1. AUTH CHECK
   // Note: Headers in Pages Router are properties on the object, not a Map.
   const authHeader = req.headers.authorization;
-  
+
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).send('Unauthorized');
   }
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
   try {
     // 2. GENERATE CONTENT
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-    const modelId = "llama-3.3-70b-versatile"; 
+    const modelId = "llama-3.3-70b-versatile";
 
     const prompt = `
       You are an expert glazier and professional blogger for a glass replacement company called Glass Replacement Pros.
@@ -39,31 +39,50 @@ export default async function handler(req, res) {
       
       Requirements:
       - Output JSON format strictly.
-      - Fields: "title" (string), "content" (string - markdown format), "summary" (string).
+      - Fields: "title" (string), "content" (string - markdown format), "summary" (string), "image_search_query" (string).
       - Tone: Informative, professional, and trustworthy.
       - Content: Use standard Markdown (headers, bullet points).
     `;
 
     const completion = await groq.chat.completions.create({
       messages: [{ role: "user", content: prompt }],
-      model: modelId, 
-      response_format: { type: "json_object" }, 
+      model: modelId,
+      response_format: { type: "json_object" },
     });
 
     const text = completion.choices[0]?.message?.content || "{}";
     const blogPost = JSON.parse(text);
 
+    // 2.5 FETCH IMAGE FROM PEXELS
+    let imageUrl = "";
+    if (process.env.PEXELS_API_KEY && blogPost.image_search_query) {
+      try {
+        const pexelsResponse = await fetch(`https://api.pexels.com/v1/search?query=${encodeURIComponent(blogPost.image_search_query)}&per_page=1`, {
+          headers: {
+            Authorization: process.env.PEXELS_API_KEY
+          }
+        });
+        const pexelsData = await pexelsResponse.json();
+        if (pexelsData.photos && pexelsData.photos.length > 0) {
+          imageUrl = pexelsData.photos[0].src.large;
+        }
+      } catch (imgError) {
+        console.error("Failed to fetch image:", imgError);
+      }
+    }
+
     // 3. PREPARE FILE PATH
     const date = new Date().toISOString().split('T')[0];
     const slug = slugify(blogPost.title, { lower: true, strict: true });
-    
+
     // Saves to: src/app/content/2024-01-01-windshield-tips.md
-    const filename = `src/content/${date}-${slug}.md`; 
+    const filename = `src/content/${date}-${slug}.md`;
 
     const fileContent = `---
 title: "${blogPost.title}"
 date: "${date}"
 description: "${blogPost.summary}"
+image: "${imageUrl}"
 ---
 
 ${blogPost.content}
@@ -71,7 +90,7 @@ ${blogPost.content}
 
     // 4. SAVE TO GITHUB
     const octokit = new Octokit({ auth: process.env.GITHUB_ACCESS_TOKEN });
-    
+
     await octokit.repos.createOrUpdateFileContents({
       owner: process.env.GITHUB_OWNER,
       repo: process.env.GITHUB_REPO,
@@ -85,10 +104,10 @@ ${blogPost.content}
     });
 
     // 5. SEND SUCCESS RESPONSE
-    return res.status(200).json({ 
-      success: true, 
-      message: `Created ${filename}`, 
-      url: `https://github.com/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/blob/main/${filename}` 
+    return res.status(200).json({
+      success: true,
+      message: `Created ${filename}`,
+      url: `https://github.com/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/blob/main/${filename}`
     });
 
   } catch (error) {
