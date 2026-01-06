@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-    const { postid } = params; // No need to await params, it is not a Promise
+    const { postid } = await params; // await params in Next.js 15+
     console.log("Resolved params:", params);
 
     const posts = getSortedPostsData();
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Post({ params }) {
-    const { postid } = params; // No need to await params
+    const { postid } = await params; // await params in Next.js 15+
     console.log("Post ID:", postid);
 
     const posts = getSortedPostsData();
