@@ -16,3 +16,4 @@ There are two primary types of auto glass: laminated and tempered.
 * **Tempered Glass**: Used for side and rear windows, tempered glass is designed to shatter into small, blunt pieces in the event of a collision, reducing the risk of injury.
 ## Conclusion
 In conclusion, windshield safety is a critical aspect of vehicle protection. By understanding the role of auto glass in preventing ejection, maintaining vehicle structure, and protecting from external elements, vehicle owners can appreciate the importance of proper windshield maintenance and repair.
+
